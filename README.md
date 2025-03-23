@@ -2,7 +2,7 @@
 
 This repository contains a proof of concept implementation of an XGBoost-powered job matching system that addresses the limitations of traditional rule-based approaches.
 
-![Job Matching System Architecture](docs/images/architecture.png)
+![Job Matching System Architecture](architecture.png)
 
 ## Live Demo
 
