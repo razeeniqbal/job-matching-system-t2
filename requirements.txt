@@ -1,16 +1,17 @@
-numpy
+# Core libraries
+streamlit
 pandas
+numpy
 scikit-learn
 xgboost
-streamlit
-shap
-matplotlib
-seaborn
 nltk
 joblib
-pymysql
-python-dotenv
-sentence-transformers
-fastapi
-uvicorn
+
+# Visualization libraries
+matplotlib
+seaborn
 plotly
+shap
+
+# For debugging
+pyyaml
