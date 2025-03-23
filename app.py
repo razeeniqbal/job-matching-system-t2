@@ -1,19 +1,43 @@
-# app.py
 import streamlit as st
 import os
+import nltk
 
-# Import tab modules
-from ui.single_match_tab import render_single_match_tab
-from ui.batch_processing_tab import render_batch_processing_tab
-from ui.json_input_tab import render_json_input_tab
-from ui.model_info_tab import render_model_info_tab
-
-# Set page configuration
+# Set page configuration (MUST be the first Streamlit command)
 st.set_page_config(
     page_title="Job Matching System",
     page_icon="🔍",
     layout="wide"
 )
+
+# Set up NLTK data path and download required data
+def setup_nltk():
+    # Create a data directory if it doesn't exist
+    os.makedirs('nltk_data', exist_ok=True)
+    
+    # Set the NLTK data path to use our custom directory
+    nltk.data.path.append(os.path.join(os.getcwd(), 'nltk_data'))
+    
+    # Download required NLTK data without using Streamlit commands
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        print('Downloading NLTK punkt data...')
+        nltk.download('punkt', download_dir='nltk_data')
+    
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        print('Downloading NLTK wordnet data...')
+        nltk.download('wordnet', download_dir='nltk_data')
+    
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        print('Downloading NLTK stopwords data...')
+        nltk.download('stopwords', download_dir='nltk_data')
+
+# Run NLTK setup at startup
+setup_nltk()
 
 # Set Streamlit theme and styling
 st.markdown("""
@@ -38,6 +62,12 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
+# Import tab modules
+from ui.single_match_tab import render_single_match_tab
+from ui.batch_processing_tab import render_batch_processing_tab
+from ui.json_input_tab import render_json_input_tab
+from ui.model_info_tab import render_model_info_tab
 
 def main():
     st.markdown("<h1 class='main-header'>🔍 Job Matching System</h1>", unsafe_allow_html=True)
