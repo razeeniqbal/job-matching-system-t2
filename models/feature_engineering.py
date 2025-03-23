@@ -10,15 +10,24 @@ from nltk.stem import WordNetLemmatizer
 import joblib
 import os
 
-# Download NLTK data - This will automatically download if missing
-try:
-    nltk.data.find('corpora/wordnet')
-    nltk.data.find('tokenizers/punkt')
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('wordnet')
-    nltk.download('punkt')
-    nltk.download('stopwords')
+# Safer NLTK data handling - with custom path
+nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
+# Function to safely download NLTK data
+def ensure_nltk_data(package_id):
+    try:
+        nltk.data.find(package_id)
+    except LookupError:
+        nltk.download(package_id.split('/')[-1], download_dir=nltk_data_dir)
+
+# Ensure all required NLTK data is available
+ensure_nltk_data('corpora/wordnet')
+ensure_nltk_data('tokenizers/punkt')
+ensure_nltk_data('corpora/stopwords')
+
+# Continue with the rest of the feature_engineering.py file...
 
 class SkillsFeatureExtractor(BaseEstimator, TransformerMixin):
     """
@@ -37,8 +46,17 @@ class SkillsFeatureExtractor(BaseEstimator, TransformerMixin):
         self.lemmatizer = WordNetLemmatizer()
         
     def _tokenize(self, text):
-        # Lemmatize and tokenize text
-        return [self.lemmatizer.lemmatize(word.lower()) for word in nltk.word_tokenize(text)]
+        # Safer tokenization with error handling
+        try:
+            # Ensure text is a string
+            if not isinstance(text, str):
+                text = str(text)
+            # Lemmatize and tokenize text
+            return [self.lemmatizer.lemmatize(word.lower()) for word in nltk.word_tokenize(text)]
+        except Exception as e:
+            # Fallback in case of tokenization errors
+            print(f"Tokenization error: {e}")
+            return text.lower().split()
     
     def fit(self, X, y=None):
         # Create a corpus of all skills to fit the vectorizer
