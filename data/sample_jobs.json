@@ -1,0 +1,77 @@
+[
+  {
+    "job_app_id": 201,
+    "job_requirements": {
+      "core_skills": ["Python", "Machine Learning", "SQL"],
+      "min_experience": 3,
+      "education": "Bachelor's",
+      "certifications": ["AWS Certified"]
+    },
+    "talent_profile": {
+      "skills": ["Python", "Machine Learning", "Deep Learning", "SQL"],
+      "experience": 4,
+      "education": "Master's",
+      "certifications": ["AWS Certified", "Google Cloud Certified"]
+    }
+  },
+  {
+    "job_app_id": 202,
+    "job_requirements": {
+      "core_skills": ["Java", "Spring Boot", "Microservices"],
+      "min_experience": 5,
+      "education": "Bachelor's",
+      "certifications": ["Oracle Java Certified"]
+    },
+    "talent_profile": {
+      "skills": ["Java", "Spring Boot", "Microservices", "Kafka"],
+      "experience": 3,
+      "education": "Diploma",
+      "certifications": ["Oracle Java Certified"]
+    }
+  },
+  {
+    "job_app_id": 203,
+    "job_requirements": {
+      "core_skills": ["JavaScript", "React", "Node.js"],
+      "min_experience": 2,
+      "education": "Bachelor's",
+      "certifications": []
+    },
+    "talent_profile": {
+      "skills": ["JavaScript", "React", "Angular", "Vue.js"],
+      "experience": 4,
+      "education": "Bachelor's",
+      "certifications": ["Frontend Developer Certified"]
+    }
+  },
+  {
+    "job_app_id": 204,
+    "job_requirements": {
+      "core_skills": ["Data Science", "Python", "R", "Statistics"],
+      "min_experience": 4,
+      "education": "Master's",
+      "certifications": ["TensorFlow Certified"]
+    },
+    "talent_profile": {
+      "skills": ["Data Science", "Python", "Statistics", "Machine Learning"],
+      "experience": 5,
+      "education": "PhD",
+      "certifications": ["TensorFlow Certified", "Azure Data Scientist"]
+    }
+  },
+  {
+    "job_app_id": 205,
+    "job_requirements": {
+      "core_skills": ["DevOps", "AWS", "Docker", "Kubernetes"],
+      "min_experience": 3,
+      "education": "Bachelor's",
+      "certifications": ["AWS DevOps Professional"]
+    },
+    "talent_profile": {
+      "skills": ["DevOps", "AWS", "Docker", "Jenkins"],
+      "experience": 2,
+      "education": "Bachelor's",
+      "certifications": ["AWS Solutions Architect"]
+    }
+  }
+]
