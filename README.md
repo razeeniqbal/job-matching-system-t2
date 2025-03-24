@@ -6,7 +6,7 @@ This repository contains a proof of concept implementation of an XGBoost-powered
 
 ## Live Demo
 
-A proof of concept is available at: [https://job-matching-system-t1.streamlit.app/](https://job-matching-system-t1.streamlit.app/)
+A proof of concept is available at: [https://job-matching-system-t1.streamlit.app/](https://job-matching-system-t2.streamlit.app/)
 
 ## Overview
 
