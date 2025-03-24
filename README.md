@@ -80,13 +80,13 @@ The new architecture implements a cleaner flow:
 
 ### Screenshots of Machine Learning Interface
 
-![Landing Page](screenshots/01 Landing Page.png)
+![Landing Page](screenshots/01-Landing-Page.png)
 
-![Result Comparison](screenshots/02 Result Comparison.png)
+![Result Comparison](screenshots/02-Result-Comparison.png)
 
-![Model Information](screenshots/03 Model Information.png)
+![Model Information](screenshots/03-Model-Information.png)
 
-![General Model Parameter](screenshots/04 General Model Parameter.png)
+![General Model Parameter](screenshots/04-General-Model-Parameter.png)
 
 ### New Streamlined Architecture
 
@@ -108,7 +108,7 @@ I've implemented a complete working solution as demonstrated in the code. The ne
    - Dynamic scoring based on actual job market patterns
    - Interactive visualization dashboard
   
-![New Architecture After Streamlining](screenshots/05 New Architecture After Streamlining.png)
+![New Architecture After Streamlining](screenshots/05-New-Architecture-After-Streamlining.png)
 
 **Please note that the proposed architecture represents an optimized redesign based on my successfully implemented proof of concept, demonstrating significant improvements in both functionality and maintainability.**
 
