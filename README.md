@@ -78,6 +78,16 @@ The new architecture implements a cleaner flow:
 - **Infrastructure needs**: Requires proper deployment environment
 - **Maintenance burden**: Requires regular retraining and monitoring
 
+### Screenshots of Machine Learning Interface
+
+![Landing Page](screenshots/01 Landing Page.png)
+
+![Result Comparison](screenshots/02 Result Comparison.png)
+
+![Model Information](screenshots/03 Model Information.png)
+
+![General Model Parameter](screenshots/04 General Model Parameter.png)
+
 ### New Streamlined Architecture
 
 I've implemented a complete working solution as demonstrated in the code. The new architecture includes:
@@ -97,6 +107,10 @@ I've implemented a complete working solution as demonstrated in the code. The ne
    - Explainable predictions with SHAP values
    - Dynamic scoring based on actual job market patterns
    - Interactive visualization dashboard
+  
+![New Architecture After Streamlining](screenshots/05 New Architecture After Streamlining.png)
+
+**Please note that the proposed architecture represents an optimized redesign based on my successfully implemented proof of concept, demonstrating significant improvements in both functionality and maintainability.**
 
 ## Project Structure
 
